@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sistema de gestão de Cartórios</title>
+    </head>
+    <body>
+        <div class="container" align="center">
+            <h1>Sistema de gestão de Cartórios</h1>
+            <hr>
+            <h2>Cadastrar Cartório</h2>
+            <form action="#" th:action="@{/cartorio/salvarCartorio}" th:Object="${cartorio}" method="POST">
+                <input type="hidden" id="id" th:field="*{id}">
+                <input type="text" th:field="*{nome}" placeholder="Nome">
+                <input type="text" th:field="*{endereco}" placeholder="Endereco">
+                
+                <button type="submit">Salvar</button>
+            </form>
+            <hr>           
+        </div>
+    </body>
+</html>
